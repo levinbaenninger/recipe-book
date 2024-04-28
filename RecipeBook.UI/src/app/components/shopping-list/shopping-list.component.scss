@@ -1,0 +1,12 @@
+.shopping-list__container {
+  margin-top: 5em;
+}
+
+a {
+  cursor: pointer;
+  transition: 200ms all ease-in;
+
+  &:hover {
+    background-color: var(--bs-light);
+  }
+}

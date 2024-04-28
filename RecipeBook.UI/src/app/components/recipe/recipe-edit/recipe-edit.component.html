@@ -1,0 +1,86 @@
+<div class="row">
+  <div class="col-xs-12">
+    <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="form-group col-xs-12 mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input
+            name="title"
+            id="title"
+            class="form-control"
+            placeholder="Beef rump steak"
+            formControlName="name"
+          />
+          <span
+            class="text-danger small"
+            *ngIf="
+              this.recipeForm.get('name')?.invalid &&
+              this.recipeForm.get('name')?.touched
+            "
+            >This field is required</span
+          >
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-xs-12 mb-3">
+          <label for="description" class="form-label">Description</label>
+          <textarea
+            name="description"
+            id="description"
+            class="form-control"
+            placeholder="A juicy beef steak is seared very hot and, depending on your preference, cooked briefly or a little longer. The perfect cut comes from the beef."
+            formControlName="description"
+          ></textarea>
+          <span
+            class="text-danger small"
+            *ngIf="
+              this.recipeForm.get('description')?.invalid &&
+              this.recipeForm.get('description')?.touched
+            "
+            >This field is required</span
+          >
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="form-group col-xs-12">
+          <label for="image-url" class="form-label">Image URL</label>
+          <input
+            type="image-url"
+            class="form-control"
+            placeholder="https://www.bettybossi.ch/rezepte/rindshohrückensteak.jpg"
+            formControlName="imagePath"
+            #imagePath
+          />
+          <span
+            class="text-danger small"
+            *ngIf="
+              this.recipeForm.get('imagePath')?.invalid &&
+              this.recipeForm.get('imagePath')?.touched
+            "
+            >This field is required</span
+          >
+        </div>
+      </div>
+      <div class="row mb-4">
+        <div class="col-xs-12">
+          <img
+            [src]="imagePath.value"
+            class="img-thumbnail"
+            *ngIf="imagePath.value"
+          />
+        </div>
+      </div>
+      <div class="row"></div>
+      <div class="col-xs-12">
+        <button
+          type="submit"
+          class="btn btn-success me-2"
+          [disabled]="recipeForm.invalid"
+        >
+          Save
+        </button>
+        <button type="button" class="btn btn-primary" (click)="onReset()">Reset</button>
+      </div>
+    </form>
+  </div>
+</div>
