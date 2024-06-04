@@ -65,10 +65,8 @@ namespace RecipeBook.API.Controllers
 				{
 					return NotFound();
 				}
-				else
-				{
-					throw;
-				}
+				
+				throw;
 			}
 
 			return NoContent();

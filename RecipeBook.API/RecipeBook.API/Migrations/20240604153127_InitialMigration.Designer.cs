@@ -11,7 +11,7 @@ using RecipeBook.API.Data;
 namespace RecipeBook.API.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240425175652_InitialMigration")]
+    [Migration("20240604153127_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -19,7 +19,7 @@ namespace RecipeBook.API.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.4")
+                .HasAnnotation("ProductVersion", "8.0.6")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);

@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "/subscriptions/8b3f2741-48db-4c6f-b8be-8174f64e6574/resourceGroups/RGRecipeBookAPI/providers/Microsoft.Web/sites/recipebook-baenninger",
+  "appService.deploySubpath": "dist\\recipe-book\\browser"
+}

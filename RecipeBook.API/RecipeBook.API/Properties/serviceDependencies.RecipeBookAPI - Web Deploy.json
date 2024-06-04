@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/RecipeBookAPI/providers/Microsoft.ServiceLinker/linkers/ConnectionStringRecipeBookConnectionStri_B38BDA045E",
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/sqls-recipe-book/databases/DBRecipeBook",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionString:RecipeBookConnectionString",
+      "dynamicId": null
+    }
+  }
+}
